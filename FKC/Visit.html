@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+
+	<title>Fatec Jornalista Omair Fagundes de Oliveira | Faculdade de Tecnologia de Bragança Paulista</title>
+
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta charset="UTF-8">
+
+	<meta name="description" content="Fatec Jornalista Omair Fagundes de Oliveira | Faculdade de Tecnologia de Bragança Paulista">
+
+    <meta name="keywords" content="Fatec Jornalista Omair Fagundes de Oliveira">
+
+    <link rel="stylesheet" id="custom-css" href="style.css" type="text/css" media="all">
+
+	<style>
+	.header__topo{
+		font-weight: bold;
+	}
+
+	.grid-container {
+	  display: grid;
+	  grid-template-columns: auto auto auto;
+	  grid-gap: 0.682em;
+	  background-image: linear-gradient(to bottom, snow, snow 50%, #bd2626 50%, #bd2626);
+	  padding: 0.455em;
+	  min-width: 65%;
+	  float: left;
+	  margin-left: 1.818em;
+	  border-right: : 1px solid red;
+	  background-color: #bd2626;
+	  border-radius: 1.364em;
+	  box-shadow: 0.273em 0.273em 0.136em grey;
+	  box-sizing: border-box;
+	  font-size: 22px;
+	}
+
+	.grid-container > div {
+	  background-color: #ad2323;
+	  text-align: center;
+	  border-radius: 0.682em;
+	  float: left;
+	  padding: 0.682em;
+	  box-sizing: border-box;
+	  font-weight: bold;
+	  font-size: 22px;
+	  color:white;
+
+	    
+	}
+	.item1 {
+	  grid-row-start: 1;
+	  grid-row-end: 4;
+	  width: 100%;
+
+	}
+	html {
+	    font-family: "Lucida Sans", sans-serif;
+	}
+
+	.flex-container {
+	  display: flex;
+	  justify-content: right;
+	  align-items: center;
+	  height: 9.091em;
+	  background-image: linear-gradient(to bottom, snow, snow 45%, #bd2626 45%, #bd2626);
+	  padding: 3.636em;
+	  width: 12.182em;
+	  border-radius: 0.909em;
+	  box-shadow: 0.227em 0.227em 0.136em grey;
+	  box-sizing: border-box;
+	  font-size: 22px;
+	  position: relative;
+	  margin-left: 60em;
+		}
+
+	.flex-container>div {
+	  background-color: #f1f1f1;
+	  color: white;
+	  width: 50%;
+	  height: 9.091em;
+	}
+
+		table, th, td {
+	    border: none;
+	}
+
+	#entrar{
+		padding: 5px;
+		background-color: #ad2323;
+		font-size: 22px;
+		color:white;
+		border-bottom: 1px tomato;
+		border-radius: 0.364em;
+		box-shadow: 0.091em 0.091em 1px grey;
+		position: relative;
+		float: right;
+	}
+	#CPF{
+		padding: 0.227em;
+		font-size: 22px;
+
+	}
+	
+	.caixinha{
+		 margin-left: 8%;
+		 margin-right: 8%;
+	}
+
+	.user_data {
+	    width: 75%;
+	    float: left;
+	    padding: 0.682em;
+	    border-right: : 1px solid red;
+	    background-color: #bd2626;
+	    border-radius: 1.364em;
+	    box-shadow: 0.273em 0.273em 0.136em grey;
+	    font-size: 22px;	}
+
+	.login_manual {
+		font-family: "Lucida Sans", sans-serif;
+		width: 25%;
+		position: relative;
+		left: 2.000em;
+		top: 2.000em;
+	    padding: 0.682em;
+	    color:#bd2626;
+	    font-weight: bold;
+	}
+
+	.searchbar {
+		float: right;
+	    padding: 6px;
+	    border: none;
+	    margin-top: 8px;
+	    margin: 6px;
+	    margin-right: 16px;
+	    font-size: 18px;
+	    width: 20em;
+	}
+	.searchbar:focus {
+		background-color: #F8F8F8;
+	}
+
+</style>
+
+</head>
+
+<body style = "background-color: #EDEAE0;">
+
+	<header>
+
+		<div class="header">
+
+			<div class="header__topo">
+
+				<div class="header__topo__icons">
+
+					<a href="adicionar_link" target="_blank">Home</a>
+
+					<a href="adicionar_link" target="_blank">Histórico</a>
+
+					<a href="adicionar_link" target="_blank">Cadastrar Visitante</a>
+
+				</div>
+				<input class="searchbar" type="text" placeholder="Procurar Aluno">
+
+			</div>
+
+			<div class="header__logo">
+
+					<img src="cps.png" style="max-width: 100px" alt="Logo do CPS">
+
+				<div class="header__logo--fatec">
+
+						<img src="logo-fatec.png" style="max-width: 250px" alt="Logo da Fatec">
+				</div>
+
+					<img src="gov-sp.png" style="max-width: 100px" alt="Logo do Governo de SP" >
+			</div>
+		</div>
+	</header><br>
+	<div class="grid-container">
+		<div class="item2">Nome Completo:<br><input type="text" size=40 name="visitorName" value="nomeCompleto" placeholder="Nome Completo" style="font-size: 22px"></div>
+		<div class="item3">RG: <br><input type="text" name="userRA"  placeholder="00.000.000-0" style="font-size: 1.000em"></></div>  
+		<div class="item4">CPF: <br><input name="userCPF"  oninput="mascara(this)" type="text" placeholder="000.000.000-00" style="font-size: 1.000em"></></div>
+		<div class="item5"><br>Data: <br><input type="date" name="userDate" value="date" placeholder="DD/MM/AAAA" style="font-size: 1.000em"></></div>
+		<div class="item6" style="text-align: right; padding-right: 2.273em;"><br>Hora de Entrada: <input type="time" name="userEntrada" value="entrada" placeholder="00:00" style="font-size: 1.000em"></><br>Hora de Saída: <input type="time" name="userSaida" value="saida" placeholder="00:00" style="font-size: 1.000em; position:relative; top:0.364em;"></><br> </div> 
+		<div class="item7">Observação:<br><textarea rows="4" placeholder="Motivo da Visita" style="font-size: 1.000em"></textarea>			
+	</div>
+</div>
+
+<div class="flex-container">
+		<input id="entrar" type="button" name="Confirmar" value="Confirmar"></submit>
+		
+
+<script>
+		function mascara(i){
+   
+   var v = i.value;
+   
+   if(isNaN(v[v.length-1])){ // impede entrar outro caractere que não seja número
+      i.value = v.substring(0, v.length-1);
+      return;
+   }
+   if( v[0] == 1 & v[1] == 8 & v[2] == 3)
+   {
+       i.setAttribute("maxlength", "13");
+       if (v.length == 13) formLogin.submit();
+   }
+   else{
+	   	i.setAttribute("maxlength", "14");
+	   if (v.length == 3 || v.length == 7) i.value += ".";
+	   if (v.length == 11) i.value += "-";
+	   if (v.length == 14) formLogin.submit();
+   }
+
+}
+</script>
+
+</body>
+</html>
