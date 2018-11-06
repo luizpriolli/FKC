@@ -14,8 +14,12 @@
 
     <meta name="keywords" content="Fatec Jornalista Omair Fagundes de Oliveira">
 
-	<style>
+    <link rel="stylesheet" id="custom-css" href="style.css" type="text/css" media="all">
 
+	<style>
+	.header__topo{
+		font-weight: bold;
+	}
 
 	.grid-container {
 	  display: grid;
@@ -33,6 +37,7 @@
 	  box-sizing: border-box;
 	  font-size: 22px;
 	}
+
 	.grid-container > div {
 	  background-color: #ad2323;
 	  text-align: center;
@@ -56,14 +61,12 @@
 	    font-family: "Lucida Sans", sans-serif;
 	}
 
-
 	.flex-container {
 	  display: flex;
 	  justify-content: right;
 	  align-items: center;
 	  height: 9.091em;
 	  background-image: linear-gradient(to bottom, snow, snow 45%, #bd2626 45%, #bd2626);
-	  
 	  padding: 3.636em;
 	  width: 18.182em;
 	  border-radius: 0.909em;
@@ -78,9 +81,11 @@
 	  width: 50%;
 	  height: 9.091em;
 	}
+
 		table, th, td {
 	    border: none;
 	}
+
 	#entrar{
 		padding: 5px;
 		background-color: #ad2323;
@@ -102,6 +107,7 @@
 		 margin-left: 8%;
 		 margin-right: 8%;
 	}
+
 	.user_data {
 	    width: 75%;
 	    float: left;
@@ -111,6 +117,7 @@
 	    border-radius: 1.364em;
 	    box-shadow: 0.273em 0.273em 0.136em grey;
 	    font-size: 22px;	}
+
 	.login_manual {
 		font-family: "Lucida Sans", sans-serif;
 		width: 25%;
@@ -122,12 +129,22 @@
 	    font-weight: bold;
 	}
 
-
-		
-
+	.searchbar {
+		float: right;
+	    padding: 6px;
+	    border: none;
+	    margin-top: 8px;
+	    margin: 6px;
+	    margin-right: 16px;
+	    font-size: 18px;
+	    width: 20em;
+	}
+	.searchbar:focus {
+		background-color: #F8F8F8;
+	}
 
 </style>
-<link rel="stylesheet" id="custom-css" href="style.css" type="text/css" media="all">
+
 </head>
 
 <body style = "background-color: #EDEAE0;">
@@ -135,24 +152,6 @@
 	<header>
 
 		<div class="header">
-
-			<div class="header__band">
-
-				<div class="header__band__navigation-mobile">
-
-					<div class="header__band__navigation-mobile__trace"></div>
-
-					<div class="header__band__navigation-mobile__text"><a> Menu </a></div>
-
-					<div class="header__band__navigation-mobile__logo">
-
-					<img src="logo-fatec.png">
-
-					</div>
-
-				</div>
-
-			</div>
 
 			<div class="header__topo">
 
@@ -162,11 +161,10 @@
 
 					<a href="adicionar_link" target="_blank">Histórico</a>
 
-					<a href="adicionar_link" target="_blank">Lista de Alunos</a>
-
 					<a href="adicionar_link" target="_blank">Cadastrar Visitante</a>
 
 				</div>
+				<input class="searchbar" type="text" placeholder="Procurar Aluno">
 
 			</div>
 
@@ -238,8 +236,6 @@
 	   if (v.length == 11) i.value += "-";
 	   if (v.length == 14) formLogin.submit();
    }
-   
-   
 
 }
 </script>
