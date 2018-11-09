@@ -192,7 +192,7 @@
 		<div class="item4">CPF: <br><input type="number" name="userCPF" value="CPF" placeholder="000.000.000-00" readonly style="font-size: 1.000em"></></div>
 		<div class="item5">Curso: <br><input type="text" name="userCurso" placeholder="Curso" size="12em" readonly style="font-size: 1.000em"></></div>
 		<div class="item6">Data: <br><input type="text" name="userDate" id="DataHoje" placeholder="DD/MM/AAAA" size=7em readonly style="font-size: 1.000em; padding-left: 0.5em"></></div>
-		<div class="item7" style="text-align: right; padding-right: 2.273em;">Hora de Entrada: <input type="time" name="userEntrada" value="entrada" placeholder="00:00" readonly style="font-size: 1.000em"></><br>Hora de Saída: <input type="time" name="userSaida" value="saida" placeholder="00:00" readonly style="font-size: 1.000em; position:relative; top:0.364em;"></><br> </div>  				
+		<div class="item7" style="text-align: center;">Horário :<br> <input type="text" id="HoraAgora" name="userEntrada" value="entrada" placeholder="00:00" size="3.5em" readonly style="font-size: 1.000em"></div>  				
 	</div>
 		</div>
 		<div class="login_manual">
@@ -253,6 +253,20 @@ if(mm<10){
 } 
 var today = dd+'/'+mm+'/'+yyyy;
 document.getElementById("DataHoje").value = today;
+
+//Adicionar on submit
+
+var horario = new Date();
+var hh = horario.getHours();
+var mi = horario.getMinutes();
+if (hh <10){
+	hh='0'+hh;
+}
+if (mi <10){
+	mi = '0'+mi;
+}
+var horario = hh+" : " +mi;
+document.getElementById("HoraAgora").value = horario;
 </script>
 
 </body>
