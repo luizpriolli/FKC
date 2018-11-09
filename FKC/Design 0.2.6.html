@@ -187,11 +187,11 @@
 				<img href="inserir link" style="width: 10.909em; height: 10.909em; border: 2px solid red; border-radius: 0.455em;" alt="Foto do Aluno" >
 			</form>
 		</div >
-		<div class="item2">Nome Completo:<br><input type="text" size=40 name="userName" value="nomeCompleto" placeholder="Nome Completo" readonly style="font-size: 22px"></div>
-		<div class="item3">RA: <br><input type="number" name="userRA" value="RA" placeholder="1830000000000" readonly style="font-size: 1.000em"></></div>  
+		<div class="item2">Nome Completo:<br><input type="text" size=40 name="userName" placeholder="Nome Completo" readonly style="font-size: 22px"></div>
+		<div class="item3">RA: <br><input type="number" name="userRA" placeholder="1830000000000" readonly style="font-size: 1.000em"></></div>  
 		<div class="item4">CPF: <br><input type="number" name="userCPF" value="CPF" placeholder="000.000.000-00" readonly style="font-size: 1.000em"></></div>
-		<div class="item5">Curso: <br><input type="text" name="userCurso" value="Curso" placeholder="Nome Completo" readonly style="font-size: 1.000em"></></div>
-		<div class="item6">Data: <br><input type="date" name="userDate" value="date" placeholder="DD/MM/AAAA" readonly style="font-size: 1.000em"></></div>
+		<div class="item5">Curso: <br><input type="text" name="userCurso" placeholder="Curso" size="12em" readonly style="font-size: 1.000em"></></div>
+		<div class="item6">Data: <br><input type="text" name="userDate" id="DataHoje" placeholder="DD/MM/AAAA" size=7em readonly style="font-size: 1.000em; padding-left: 0.5em"></></div>
 		<div class="item7" style="text-align: right; padding-right: 2.273em;">Hora de Entrada: <input type="time" name="userEntrada" value="entrada" placeholder="00:00" readonly style="font-size: 1.000em"></><br>Hora de Saída: <input type="time" name="userSaida" value="saida" placeholder="00:00" readonly style="font-size: 1.000em; position:relative; top:0.364em;"></><br> </div>  				
 	</div>
 		</div>
@@ -238,6 +238,21 @@
    }
 
 }
+
+
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1; //January is 0!
+
+var yyyy = today.getFullYear();
+if(dd<10){
+    dd='0'+dd;
+} 
+if(mm<10){
+    mm='0'+mm;
+} 
+var today = dd+'/'+mm+'/'+yyyy;
+document.getElementById("DataHoje").value = today;
 </script>
 
 </body>
