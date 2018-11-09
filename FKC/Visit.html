@@ -36,6 +36,7 @@
 	  box-shadow: 0.273em 0.273em 0.136em grey;
 	  box-sizing: border-box;
 	  font-size: 22px;
+	  position: relative;
 	}
 
 	.grid-container > div {
@@ -48,7 +49,7 @@
 	  font-weight: bold;
 	  font-size: 22px;
 	  color:white;
-
+	  
 	    
 	}
 	.item1 {
@@ -74,7 +75,7 @@
 	  box-sizing: border-box;
 	  font-size: 22px;
 	  margin-left: 60em;
-	  position: fixed;
+	 
 		}
 
 	.flex-container>div {
@@ -145,6 +146,73 @@
 		background-color: #F8F8F8;
 	}
 
+
+	.container {
+	  position: relative;
+	  padding-left: 1.4em;
+	  margin-bottom: 12px;
+	  cursor: pointer;
+	  font-size: 0.8em;
+	  -webkit-user-select: none;
+	  -moz-user-select: none;
+	  -ms-user-select: none;
+	  user-select: none;
+	  text-align: left;
+	  margin-left: 2em;
+	  display: inline;
+	  align-items: left;
+	  text-shadow: 2px solid lightgray;
+	}
+
+	/* Hide the browser's default checkbox */
+	.container input {
+	  position: relative;
+	  opacity: 0;
+	  cursor: pointer;
+	  height: 0;
+	  width: 0;
+	}
+
+	/* Create a custom checkbox */
+	.checkmark {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  height: 0.8em;
+	  width: 0.8em;
+	  background-color: #eee;
+	}
+
+	/* On mouse-over, add a grey background color */
+	.container:hover input ~ .checkmark {
+	  background-color: #ccc;
+	}
+
+	/* When the checkbox is checked, add a blue background */
+	.container input:checked ~ .checkmark {
+	  background-color: #2196F3;
+	  
+	}
+
+	.container input:checked ~ label{
+		color:black;
+	}
+
+
+	/* Style the checkmark/indicator */
+	.container .checkmark:after {
+	  left: 9px;
+	  top: 5px;
+	  width: 5px;
+	  height: 10px;
+	  border: solid white;
+	  border-width: 0 3px 3px 0;
+	  -webkit-transform: rotate(45deg);
+	  -ms-transform: rotate(45deg);
+	  transform: rotate(45deg);
+	  display: inline;
+	}
+
 </style>
 
 </head>
@@ -187,10 +255,46 @@
 		<div class="item2">Nome Completo:<br><input type="text" size=40 name="visitorName" value="nomeCompleto" placeholder="Nome Completo" style="font-size: 22px"></div>
 		<div class="item3">RG: <br><input type="text" name="userRA"  placeholder="00.000.000-0" style="font-size: 1.000em"></></div>  
 		<div class="item4">CPF: <br><input name="userCPF"  oninput="mascara(this)" type="text" placeholder="000.000.000-00" style="font-size: 1.000em"></></div>
-		<div class="item5"><br>Data: <br><input type="date" name="userDate" value="date" placeholder="DD/MM/AAAA" style="font-size: 1.000em"></></div>
+		<div class="custom-select" style="width:25em;">Motivo Da Visita :
+		<table style="text-align: left; size: 0.8em; padding:0.4em">
+		  <tr><td style="padding:0.4em"><label>
+			  <input type="checkbox">
+			  <span class="checkmark"></span>Prestação de Serviço
+			</label></td>
+
+			<td style="padding:0.4em"><label>
+			  <input type="checkbox">
+			  <span class="checkmark"></span>Curso/Palestra
+			</label></td>
+
+			</tr><tr><td style="padding:0.4em"><label>
+			  <input type="checkbox">
+			  <span class="checkmark"></span>Evento
+			</label></td>
+
+			<td style="padding:0.4em"><label>
+			  <input type="checkbox">
+			  <span class="checkmark"></span>Matrícula
+			</label></td>
+
+			<td style="padding:0.4em"><label>
+			  <input type="checkbox">
+			  <span class="checkmark"></span>Vestibular
+			</label></td>
+
+			</tr><tr><td style="padding:0.4em"><label><input type="checkbox">
+			  <span class="checkmark"></span>Conhecer a Unidade
+			</label></td>
+
+			<td style="padding:0.4em"><label>
+			  <input type="checkbox">
+			  <span class="checkmark"></span>Outro
+			</label></td></tr>
+			</table>
+		</div>
 		<div class="item6" style="text-align: right; padding-right: 2.273em;"><br>Hora de Entrada: <input type="time" name="userEntrada" value="entrada" placeholder="00:00" style="font-size: 1.000em"></><br>Hora de Saída: <input type="time" name="userSaida" value="saida" placeholder="00:00" style="font-size: 1.000em; position:relative; top:0.364em;"></><br> </div> 
-		<div class="item7">Observação:<br><textarea rows="4" placeholder="Motivo da Visita" style="font-size: 1.000em"></textarea></div>
-		<div style="background-color:#bd2626;"></div>
+		<div class="item7">Observação:<br><textarea rows="4" placeholder="Observação extra" style="font-size: 1.000em"></textarea></div>
+		<div class="item8">Data : <input type="date" name="userDate" value="date" placeholder="DD/MM/AAAA" style="font-size: 1.000em"></></div>
 		<div style="background-color:#bd2626;"></div>
 		<div class="item12" style="position: relative; float:left; width:6.3em"> <input id="entrar" type="button" name="Confirmar" value="Confirmar"></submit></div>
 	</div>
@@ -222,6 +326,8 @@
 
 }
 </script>
+
+
 
 </body>
 </html>
